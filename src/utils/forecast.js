@@ -11,7 +11,9 @@ const forecast = (latitude, longitude, callback) => {
 
             const{
                 temperature,
-                precip
+                precip,
+                feelslike,
+                humidity
             } = current
 
             const { 
@@ -19,7 +21,7 @@ const forecast = (latitude, longitude, callback) => {
                 country
             } = location
 
-            const forecast ='It is currently '+ temperature + ' degrees out. There is ' + precip + '% chance of rain'
+            const forecast ='It is currently '+ temperature + ' degrees out. It feels like ' + feelslike  + ' degrees out. The humidity is ' + humidity + '% and the chance of rain is ' + precip + '%'
             const _location = name + ' , ' + country
             const data = {
                 forecast,
